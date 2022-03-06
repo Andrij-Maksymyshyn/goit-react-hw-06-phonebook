@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addItem } from '../../redux/PhonebookSlice';
+import { getItems } from 'redux/selectors';
+import { addItem } from 'redux/PhonebookSlice';
 import { nanoid } from 'nanoid';
 import { Formik, ErrorMessage } from 'formik';
 import * as yup from 'yup';
@@ -14,7 +15,7 @@ import {
 
 
 function ContactForm() {
-  const contacts = useSelector(({ contacts }) => contacts.items);
+  const contacts = useSelector(getItems);
   const dispatch = useDispatch();
 
 

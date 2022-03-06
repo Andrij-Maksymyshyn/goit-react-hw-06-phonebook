@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { updateFilter } from '../../redux/PhonebookSlice';
+import { updateFilter } from 'redux/PhonebookSlice';
 import { LabelFil, InputFil } from './Filter.styled';
 
 const Filter = () => {

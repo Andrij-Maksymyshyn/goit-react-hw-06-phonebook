@@ -1,13 +1,14 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { deleteItem } from '../../redux/PhonebookSlice';
+import { deleteItem } from 'redux/PhonebookSlice';
 import PropTypes from 'prop-types';
 import { LiContact, ButtonDelete } from './ContactItem.styled';
 
 const ContactItem = ({ name, number, id }) => {
   const dispatch = useDispatch();
   const deleteContact = () => {
-    dispatch(deleteItem(id))  };
+    dispatch(deleteItem(id))
+  };
 
 
   return (
